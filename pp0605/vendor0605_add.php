@@ -16,7 +16,7 @@ header("location:vendor0605_admin.php");
 新增頁面<br><br>
 
 廠商名稱:<input type="text" name="name" /> <br>
-廠商敘述:<input type="textarea" name="content" /> <br>
+廠商敘述:<textarea name="content" cols="45" rows="3"></textarea><br>
 <input type="submit" value="送出" /><br>
 
 </form>
