@@ -27,6 +27,9 @@ $c2  = mysqli_fetch_assoc($c1);
   <?php } ?>
   <?php }while($c2 = mysqli_fetch_assoc($c1) ) ; ?>
   <tr>
-    <td colspan="3" align="center" valign="middle"><a href="vendor0605_add.php">新增</a></td>
+    <td colspan="3" align="center" valign="middle">
+    <a href="vendor0605_add.php">新增</a><br>
+    <a href="admin0605_list.php">觀看商品</a>
+    </td>
   </tr>
 </table>
