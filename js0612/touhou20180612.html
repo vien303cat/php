@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<!-- <link href="0612html_1.css" rel="stylesheet" /> <!--載入CSS的語法--> 
+
+<style>
+#aa{
+    width:1024px;
+    height:500px;
+    background-color:#EEE;
+    margin:50px auto;
+    background-repeat:no-repeat;
+    background-position: center center; 
+}
+</style>
+
+
+</head>
+<body style="margin:0px">
+        <div id="ax"><div id="aa"></div></div>
+        <br><br>
+<div id="bott" style="margin:auto; width:1024px;">
+    <input type="button" value="圖片1" onclick="photo(1);"> 
+    <input type="button" value="圖片2" onclick="photo(2);"> 
+    <input type="button" value="圖片3" onclick="photo(3);"> 
+    <input type="button" value="圖片4" onclick="photo(4);">
+    <input type="button" value="開關0" onclick="switch0();"> 
+    <input type="button" value="開關1" onclick="switch1();">
+    <input type="button" value="忍術轉換術" onclick="switch2();"> 
+</div>
+</body>
+</html>
+<script>
+    var XD = 0 ;
+    function photo(ph){
+        if(XD == 0){
+            document.getElementById("aa").style.backgroundImage = "url(img/a0" + ph + ".png)";  
+        }
+        if(XD == 1){
+            document.getElementById("aa").style.backgroundImage = "url(img/b0" + ph + ".jpg)";  
+        }
+    //  另外一種寫法:
+    //  document.getElementById("aa").style = "width:1024px;height:500px;background-image: url(img/a0" + ph + ".png);margin:auto;background-repeat:no-repeat;background-position: center center;";
+    
+    }
+    var s0 = 0;
+    function switch0(){  //設定開關判斷用的變數
+        if(s0 == 0){
+            s0 = 1 ;
+            document.getElementById("aa").style.display ="none";
+        }else{
+            s0 = 0;
+            document.getElementById("aa").style.display ="block";}  
+    }       //設定開與關用的切換
+                  
+    var s1 = 0;
+    function switch1(){
+        var my_div = '<div id="aa"></div>';
+        if(s1 == 0){
+            s1 = 1 ;
+            document.getElementById("ax").innerHTML= "";
+        }else{s1 = 0;
+              document.getElementById("ax").innerHTML= my_div; }
+    }
+
+    function switch2(){ //自訂轉換圖名變數
+        if(XD == 0){
+            XD = 1 ;
+        }else{XD = 0;}
+    }
+</script>

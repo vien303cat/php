@@ -42,7 +42,7 @@ if(!empty($_POST["title"]))
          <td height="50" align="left" valign="middle"><input type="file" name="photo"></td>
        </tr>
        <tr>
-         <td height="50" colspan="2" align="center" valign="middle"><input type="submit" value="送出" /></td>
+         <td height="50" colspan="2" align="center" valign="middle"><input type="submit" value="送出" /> </td>
        </tr>
      </table>
      </form>

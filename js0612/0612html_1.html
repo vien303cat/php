@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<!-- <link href="0612html_1.css" rel="stylesheet" /> <!--載入CSS的語法--> 
+
+<style>
+body{
+    margin:0;
+}
+#a1{
+    width:100%;
+    height:200px;
+    background-color:rgba(0,255,0,0.5);
+     /*  rgba(R,G,B,透明度_0~1) RGB_0~255  */
+}
+</style>
+
+
+</head>
+<body>
+<div id="a1" >0.0</div>
+<span id="a2">ABC告嘎低</span>
+<input value="wow" id="inp">
+<br><textarea id="cc"></textarea><br>
+
+</body>
+</html>
+
+<script> /*JS習慣放程式的最後面*/
+/*  xxx = document.getElementById("a2").innerHTML; //從網頁抓值 */
+    xxx = document.getElementById("inp").value; //從文字欄位抓值  
+    document.getElementById("a2").innerHTML = document.getElementById("inp").value; //把值送到網頁的指定內容
+    xxx = document.getElementById("inp").value = "FlandreScarlet";
+    document.getElementById("cc").innerHTML = "VV\nyoo\nwow"; //把值送到文字欄位(多行)的指定內容，如要換行用\n
+
+    //利用JS控制CSS (兩種方法)
+    document.getElementById("a1").style = "background-color:rgba(100,100,100,0.9);" ; //可以多項
+    document.getElementById("a1").style.backgroundColor = "rgba(255,0,0,0.9)" ;       //限定一項
+
+    var aaa = 1;
+    alert(xxx);
+    alert(aaa);  /*彈出視窗(警告) 可以用變數或字元*/
+    alert("恭喜您是第100萬位幸運得主，請將運費200$匯入此帳戶並且獲得一包維力雜醬麵!!");
+
+</script>

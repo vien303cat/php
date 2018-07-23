@@ -1,0 +1,20 @@
+{
+    "short_name": "Touhou",
+    "name": "東方幻想鄉",
+    "icons": [
+      {
+        "src": "images/japan192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "images/japan.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "index2.html",
+    "background_color": "#FF1493",
+    "display": "standalone",
+    "theme_color": "#3367D6"
+  }

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<!-- <link href="0612html_1.css" rel="stylesheet" /> <!--載入CSS的語法--> 
+
+<style>
+    .ouc{
+        width: 100px;
+        height:100px;
+        display:inline-block;
+        background-size:100px 100px;
+        margin:10px;         
+    }
+</style>
+
+
+</head>
+<body style="margin:0px">
+    <div class="ouc" style="background-image:url(img/a01.png);" title="a01.png" onmouseover="imgout('a01.png');" onmouseout="goout();"> </div>
+    <div class="ouc" style="background-image:url(img/a02.png);" title="a02.png" onmouseover="imgout('a02.png');" onmouseout="goout();"> </div>
+    <div class="ouc" style="background-image:url(img/a03.png);" title="a03.png" onmouseover="imgout('a03.png');" onmouseout="goout();"> </div>
+    <div class="ouc" style="background-image:url(img/a04.png);" title="a04.png" onmouseover="imgout('a04.png');" onmouseout="goout();"> </div>
+    <div id="table" style="width:100%;height:50px;background-position:center center; "></div>
+</body>
+</html>
+<script> //****************滑鼠移入移出時顯示以及不顯示圖片********************//
+    function imgout(xx){
+        my_img = "<div style='width:500px;height:500px;margin:30px auto;'><img src='img/"+ xx +"'  height='500px'></div>";
+        document.getElementById("table").innerHTML = my_img ;
+    }
+    function goout(){
+        document.getElementById("table").innerHTML ="";
+    }
+</script>

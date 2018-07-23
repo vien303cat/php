@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<script src="jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <input type="password" id="pw1"><br>
+    <div id="div1" onclick="pwout()" style="width:80px;height:30px;background-color:#DDD;">顯示密碼</div><br>
+    <input type="password" id="pw2"><br>
+    <div id="div2" style="width:80px;height:30px;background-color:#DDD;">顯示蜜蜜</div><br>
+</body>
+</html>
+
+<script>
+    var now_pw = 0 ;
+    function pwout(){
+        if(now_pw == 0){
+            now_pw = 1 ;
+            document.getElementById("div1").innerHTML = "隱藏密碼";
+            document.getElementById("pw1").type = "text";
+        }else{
+            document.getElementById("div1").innerHTML = "顯示密碼";
+            document.getElementById("pw1").type = "password";
+            now_pw = 0 ;
+        }
+
+    }
+    var now_pw2 = 0 ;
+    if(now_pw2 == 0){
+    $("#div2").click(function(){
+        now_pw2 = 1 ;
+        $("#pw2").attr("type","text");
+        $("#div2").html("隱藏蜜蜜");
+    });
+    }else{
+    $("#div2").click(function(){
+        now_pw2 = 0;
+        $("#pw2").attr("type","password");
+        $("#div2").html("顯示蜜蜜");
+    });
+    }
+</script>

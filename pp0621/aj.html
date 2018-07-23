@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title></title>
+  <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+      <input id="a01" >
+      <input type="button" value="送啦" onclick="cc()">
+      <div id="pho" style="width:100vw;height:100vh"></div>
+    </body>
+    </html>
+    <script>
+        //這裡與api的意思是將input的值輸入進去之後 傳送到了api
+        //api回傳<img src....>回來再吧div id="pho"的值改成api回傳的值
+        //因此回傳了圖片位置之後顯示在div上面
+        function cc(){
+            ww = document.getElementById("a01").value;
+            $.post("aj_api.php",{a01:"xxx",a02:"ooo",ww},function(xx){ 
+                document.getElementById("pho").innerHTML = xx ; 
+            });
+            document.getElementById("a01").value="";
+        }
+//   $.get("傳送目標API",{傳送的值},function(回傳值){});  JSON格式傳送  
+//   $.post("傳送目標API",{傳送的值},function(回傳值){});      
+/*          
+        var dd = "0123456"; 
+        JSON{   //AJ格式 //利用冒號接續若要兩個以上利用逗點
+            a01:"xxx",   
+            a02:"ooo",
+            a03:"尼豪",
+            a04:dd
+            }
+*/
+        
+    </script>

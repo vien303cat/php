@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title></title>
+  <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+        帳號:<input id="a01" ><br><br>密碼:<input id="a02" ><br>
+        <input type="button" value="送啦" onclick="cc()">
+        <div id="dio" style="width:100vw;height:100vh"></div>
+    </body>
+    </html>
+    <script>
+        function cc(){
+            ww = document.getElementById("a01").value;
+            ww2 = document.getElementById("a02").value;
+            
+            $.post("aj_api_2.php",{ww,ww2,ouo:["u1","u2","u3","u4"]},function(xx){ 
+                yy = eval( "(" + xx + ")" );
+                alert("帳號" + yy.name);
+                alert("密碼" + yy.pw);
+                alert("1:" + yy.ll[0]);
+                alert("2:" + yy.ll[1]);
+                alert("3:" + yy.ll[2]);
+                alert("4:" + yy.ll[3]);
+                
+            });
+            document.getElementById("a01").value ="";
+            document.getElementById("a02").value ="";
+        }
+
+        
+    </script>
