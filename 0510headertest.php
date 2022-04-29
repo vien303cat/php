@@ -10,7 +10,7 @@ echo "當11:45之後開這檔案會到yahoo<br>
       還沒到跳頁時間哦!<br>"   ; 
 echo $ss3."<br>";
 
- if($ss3 >= 114500 && ss3 <115000)
+ if($ss3 >= 114500 && $ss3 <115000)
  {  
    header("location:https://tw.yahoo.com/");     
  }
@@ -19,4 +19,5 @@ echo $ss3."<br>";
    header("location:http://www.google.com");    
  }                                                 
     
+ 
 ?>
